@@ -27,12 +27,26 @@ export default function Projects(){
         {list.map(p=> (
           <AnimatedCard key={p.id}>
             <div className="flex flex-col gap-3">
-              <div className="text-lg font-semibold">{p.title}</div>
+              {p.images?.[0] && (
+                <div className="relative h-48 overflow-hidden rounded-lg">
+                  <img 
+                    src={p.images[0]} 
+                    alt={p.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div className="flex items-center justify-between">
+                <div className="text-lg font-semibold">{p.title}</div>
+                <span className="text-xs px-2 py-1 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-black">{p.status}</span>
+              </div>
               <div className="text-sm text-slate-300">{p.description}</div>
-              <div className="mt-2 flex gap-2 flex-wrap">{p.tags.map(t=> <span key={t} className="text-xs px-2 py-1 rounded bg-[#0b1220]">{t}</span>)}</div>
-              <div className="mt-4 flex gap-2">
-                <button className="px-3 py-1 rounded bg-[#111827]">View</button>
-                <button className="px-3 py-1 rounded border">Source</button>
+              <div className="mt-2 flex gap-2 flex-wrap">
+                {p.tags.map(t=> (
+                  <span key={t} className="text-xs px-2 py-1 rounded bg-[#0b1220] hover:bg-[#0f1836] transition-colors">
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
           </AnimatedCard>

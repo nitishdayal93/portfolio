@@ -12,17 +12,22 @@ export default function Featured(){
             <div className="flex-1">
               <div className="text-lg font-bold">ECOMMERCE</div>
               <div className="mt-2 text-slate-300">
-            <p className="mb-4">"buy alll your clothes here" — A modern ecommerce platform built with React and Node.js that offers a seamless shopping experience for clothing and fashion accessories.</p>
+            <div className="mb-4 flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-black text-sm">Coming Soon</span>
+              <span className="text-neon-purple">Development Starting Q4 2025</span>
+            </div>
+            <p className="mb-4">An ambitious e-commerce platform focused on providing a premium shopping experience for fashion enthusiasts.</p>
             <ul className="space-y-2 text-sm">
-              <li>• Secure payment processing with Stripe integration</li>
-              <li>• Real-time inventory management</li>
-              <li>• User accounts with order history</li>
-              <li>• Mobile-responsive design</li>
+              <li>• Planned Features:</li>
+              <li>• Secure payment processing with Stripe</li>
+              <li>• Real-time inventory tracking</li>
+              <li>• User profiles and order history</li>
+              <li>• Responsive design for all devices</li>
+              <li>• AI-powered size recommendations</li>
             </ul>
           </div>
-          <div className="mt-6 flex gap-3">
-            <button className="px-4 py-2 rounded bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-black hover:opacity-90 transition-opacity">Live Demo</button>
-            <button className="px-4 py-2 rounded border border-slate-700 hover:bg-slate-800 transition-colors">View Code</button>
+          <div className="mt-6">
+            <span className="text-sm text-neon-cyan">Project development updates will be posted here soon</span>
           </div>
             </div>
           </div>

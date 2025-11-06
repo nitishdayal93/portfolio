@@ -34,9 +34,9 @@ export default function Hero(){
       <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.2}} className="flex-1 flex items-center justify-center">
         <div className="w-72 h-80 md:w-96 md:h-[450px] rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700/50">
           <img 
-            src="/profile.jpg" 
+            src="/profile.PNG" 
             alt="Nitish Dayal" 
-            className="w-full h-full object-contain bg-[#071025]"
+            className="w-full h-full object-contain"
             loading="eager"
           />
         </div>

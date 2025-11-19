@@ -19,7 +19,13 @@ export default function Projects(){
 
       <div className="mt-4 flex gap-3 flex-wrap">
         {tags.map(t=> (
-          <button key={t} onClick={()=>setFilter(t)} className={`px-3 py-1 rounded-full ${filter===t? 'bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-black':'bg-[#0b1220]'}`}>{t}</button>
+          <button
+            key={t}
+            onClick={()=>setFilter(t)}
+            className={`px-3 py-1 rounded-full transition-colors ${filter===t ? 'bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-black' : 'bg-gray-100 dark:bg-[#0b1220] text-slate-900 dark:text-slate-300'}`}
+          >
+            {t}
+          </button>
         ))}
       </div>
 
@@ -40,10 +46,10 @@ export default function Projects(){
                 <div className="text-lg font-semibold">{p.title}</div>
                 <span className="text-xs px-2 py-1 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-black">{p.status}</span>
               </div>
-              <div className="text-sm text-slate-300">{p.description}</div>
+              <div className="text-sm text-slate-700 dark:text-slate-300">{p.description}</div>
               <div className="mt-2 flex gap-2 flex-wrap">
                 {p.tags.map(t=> (
-                  <span key={t} className="text-xs px-2 py-1 rounded bg-[#0b1220] hover:bg-[#0f1836] transition-colors">
+                  <span key={t} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-[#0b1220] text-slate-900 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-[#0f1836] transition-colors">
                     {t}
                   </span>
                 ))}

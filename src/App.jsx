@@ -11,15 +11,24 @@ import CursorGlow from './components/CursorGlow'
 import ThemeToggle from './components/ThemeToggle'
 
 export default function App(){
-  const [theme, setTheme] = useState('dark')
+  // initialize theme from localStorage or system preference
+  const [theme, setTheme] = useState(() => {
+    try {
+      const stored = localStorage.getItem('theme')
+      if(stored) return stored
+      if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark'
+    } catch (e) {}
+    return 'dark'
+  })
 
   useEffect(()=>{
     document.documentElement.classList.toggle('dark', theme==='dark')
+    try { localStorage.setItem('theme', theme) } catch(e){}
   },[theme])
 
   return (
     <AnimatePresence mode="wait">
-      <div className="min-h-screen bg-[#0b0f17] text-slate-100">
+  <div className={`min-h-screen ${theme==='dark' ? 'bg-[#0b0f17] text-slate-100' : 'bg-white text-slate-900'}`}>
         <CursorGlow />
         <Nav />
         <main className="max-w-6xl mx-auto px-5 md:px-8">

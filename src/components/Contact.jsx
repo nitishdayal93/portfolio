@@ -11,14 +11,14 @@ export default function Contact(){
           initial={{opacity: 0, y: 20}}
           whileInView={{opacity: 1, y: 0}}
           transition={{duration: 0.5}}
-          className="p-6 rounded-lg bg-[#071025]/60 border border-slate-800 hover:border-slate-700 transition-colors"
+          className="p-6 rounded-lg bg-white/60 dark:bg-[#071025]/60 border border-slate-200 dark:border-slate-800 hover:bg-gray-50 dark:hover:bg-[#071025] transition-colors text-slate-900 dark:text-slate-300"
         >
           <div className="flex items-center gap-3 mb-4">
             <FaEnvelope className="text-2xl text-[#00d4ff]" />
             <div className="font-medium text-lg">Email</div>
           </div>
           <a 
-            className="text-slate-300 hover:text-[#00d4ff] transition-colors flex items-center gap-2" 
+            className="text-slate-700 dark:text-slate-300 hover:text-[#00d4ff] transition-colors flex items-center gap-2" 
             href="mailto:nitishdayal93@gmail.com"
           >
             <span>nitishdayal93@gmail.com</span>
@@ -29,7 +29,7 @@ export default function Contact(){
               href="https://github.com/nitishdayal93" 
               target="_blank" 
               rel="noreferrer" 
-              className="text-3xl text-slate-300 hover:text-white transition-colors"
+              className="text-3xl text-slate-800 dark:text-slate-300 hover:text-black dark:hover:text-white transition-colors"
             >
               <FaGithub/>
             </motion.a>
@@ -48,7 +48,7 @@ export default function Contact(){
           initial={{opacity: 0, y: 20}}
           whileInView={{opacity: 1, y: 0}}
           transition={{duration: 0.5, delay: 0.2}}
-          className="p-6 rounded-lg bg-[#071025]/60 border border-slate-800 hover:border-slate-700 transition-colors"
+          className="p-6 rounded-lg bg-white/60 dark:bg-[#071025]/60 border border-slate-200 dark:border-slate-800 hover:bg-gray-50 dark:hover:bg-[#071025] transition-colors text-slate-900 dark:text-slate-300"
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="text-2xl font-bold bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-transparent bg-clip-text">ND</div>
@@ -56,12 +56,12 @@ export default function Contact(){
           </div>
           <a 
             href="https://NitishDayal.dev" 
-            className="text-slate-300 hover:text-[#00d4ff] transition-colors"
+            className="text-slate-700 dark:text-slate-300 hover:text-[#00d4ff] transition-colors"
           >
             NitishDayal.dev
           </a>
-          <div className="mt-4 text-slate-300">
-            Full-stack developer specializing in React and Node.js. Building scalable web applications and engaging user experiences.
+          <div className="mt-4 text-slate-700 dark:text-slate-300">
+            To secure a challenging position where I can effectively contribute my skills as Software Professional, possessing competent Technical Skills
           </div>
         </motion.div>
       </div>

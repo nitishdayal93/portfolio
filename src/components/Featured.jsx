@@ -11,7 +11,7 @@ export default function Featured(){
           <div className="md:flex md:items-center md:gap-6">
             <div className="flex-1">
               <div className="text-lg font-bold">ECOMMERCE</div>
-              <div className="mt-2 text-slate-300">
+              <div className="mt-2 text-slate-700 dark:text-slate-300">
             <div className="mb-4 flex items-center gap-2">
               <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#8a2be2] text-black text-sm">Coming Soon</span>
               <span className="text-neon-purple">Development Starting Q4 2025</span>

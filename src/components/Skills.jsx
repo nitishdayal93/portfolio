@@ -69,14 +69,14 @@ export default function Skills(){
             initial={{opacity:0, y:20}}
             whileInView={{opacity:1, y:0}}
             transition={{duration: 0.3}}
-            className="p-5 rounded-xl bg-[#071025]/60 border border-slate-800">
-            <h4 className="font-medium text-slate-200 text-lg mb-4">{g.title}</h4>
+            className="p-5 rounded-xl bg-white/60 dark:bg-[#071025]/60 border border-slate-200 dark:border-slate-800">
+            <h4 className="font-medium text-slate-800 dark:text-slate-200 text-lg mb-4">{g.title}</h4>
             <ul className="grid grid-cols-2 gap-3">
               {g.items.map(item => (
                 <motion.li 
                   key={item.name}
                   whileHover={{scale:1.05}}
-                  className="flex items-center gap-2 p-2 rounded-lg bg-[#0b1220] text-slate-300 hover:bg-[#0f1836] transition-colors">
+                  className="flex items-center gap-2 p-2 rounded-lg bg-gray-100 dark:bg-[#0b1220] text-slate-800 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-[#0f1836] transition-colors">
                   <span className="text-xl">{item.icon}</span>
                   <span className="text-sm">{item.name}</span>
                 </motion.li>
